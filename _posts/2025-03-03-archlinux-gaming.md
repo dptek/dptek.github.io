@@ -29,6 +29,7 @@ sudo cp your.conf linux-cachyos.conf
 sudo nvim linux-cacyos.conf
 ```
 按照视频编辑内核名称
+
 grub启动：确保你已经添加Chaotic-aur软件源
 ```bash
 sudo pacman -Ss update-grub
