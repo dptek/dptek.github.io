@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "为 Arch Linux 添加 CachyOS 内核，把各种游戏都支持起来"
-author: DPTEK
+author: "DPTEK"
 date: 2025-03-03 07:07:07 -0700
 categories: Linux gaming
 ---
