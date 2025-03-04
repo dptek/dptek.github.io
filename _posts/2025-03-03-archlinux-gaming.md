@@ -1,3 +1,7 @@
+---
+Author: DPTEK
+---
+
 # 在Archlinux下玩游戏
 
 ## 1. 添加 CachyOS 软件源：
