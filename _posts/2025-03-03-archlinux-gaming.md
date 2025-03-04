@@ -1,9 +1,9 @@
 ---
-Layout: post
-Title: "为 Arch Linux 添加 CachyOS 内核，把各种游戏都支持起来"
-Author: DPTEK
-Date: 2025-03-03 07:07:07 -0700
-Categories: Linux gaming
+layout: post
+title: "为 Arch Linux 添加 CachyOS 内核，把各种游戏都支持起来"
+author: DPTEK
+date: 2025-03-03 07:07:07 -0700
+categories: Linux gaming
 ---
 
 # 在Arch linux下玩游戏的思路是使用CachyOS的内核和Proton组件
