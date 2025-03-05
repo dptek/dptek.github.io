@@ -38,7 +38,7 @@ sudo nvim linux-cacyos.conf
 
 grub启动：确保你已经添加Chaotic-aur软件源
 ```bash
-sudo pacman -Ss update-grub
+sudo pacman -S update-grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ## 5.安装显卡驱动Intel、AMD或者Nvidia
