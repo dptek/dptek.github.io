@@ -9,6 +9,8 @@ image: assets/images/2025-03-03/ArchLinux-CachyOS-0.png
 
 # 在Arch linux下玩游戏的思路是使用CachyOS的内核和Proton组件
 
+[![Watch the video](https://dptek.github.io/assets/images/2025-03-03/ArchLinux-CachyOS-0.png)](https://youtu.be/nBB_byld4ZA)
+
 ## 1. 添加 CachyOS 软件源：
 来源： [CachyOS软件仓库](https://wiki.cachyos.org/features/optimized_repos/)
 
