@@ -121,6 +121,12 @@ ibus适合安装在gnome上
 sudo pacman -S ibus  ibus-sunpinyin ibus-libpinyin ibus-table-chinese
 ```
 
-## 完成了Arch Linux的安装和基本配置
+## 安装Gnome的 extension-manager
+
+```bash
+sudo pacman -S extension-manager
+```
+
+现在你就可以打开这个软件来下载定制你的gnome桌面了。
 
 这种安装方式比安装Windows和其他简单的发行版比你觉得怎样呢？
