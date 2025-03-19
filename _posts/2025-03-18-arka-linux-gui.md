@@ -89,6 +89,11 @@ Chaotic AUR 可以实现用 pacman 直接安装已经编译好的软件包，减
 sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
 sudo pacman-key --lsign-key 3056513887B78AEB
 ```
+```bash
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+```
+
 Then, we append (adding at the end) the following to /etc/pacman.conf:
 ```bash
 [chaotic-aur]
