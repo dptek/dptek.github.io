@@ -40,12 +40,17 @@ sudo pacman -Syu
   ```
   如果无法 ping 通，请检查您的网络设置。
 - 检查 `/etc/pacman.d/mirrorlist` 文件，确保镜像源有效。您可以手动编辑该文件，将靠近您所在地区的镜像移到顶部，或者使用以下命令生成新的镜像列表：
+
+执行此命令找到国家代码：
+```bash
+  reflector --list-countries
+```
+
   ```bash
   sudo pacman -Syy
-  reflector --list-countries
   sudo reflector --country 'US' --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
   ```
-  例如，如果您在中国，可以用 `--country CN`。
+  如果您在中国，可以用 `--country CN`。
 
 ### 3. 解决依赖冲突
 如果更新时提示依赖冲突（例如某个包需要特定版本的依赖），可以尝试以下方法：
@@ -76,4 +81,37 @@ sudo pacman -Syu
   ```
   但请谨慎使用，确保不会覆盖重要配置文件。
 
+## 更新未完成之后重启电脑
+### 1. 添加Chaotic AUR
+Chaotic AUR 可以实现用 pacman 直接安装已经编译好的软件包，减少从yay来安装AUR软件需要编译的机会。
 
+```bash
+sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+sudo pacman-key --lsign-key 3056513887B78AEB
+```
+Then, we append (adding at the end) the following to /etc/pacman.conf:
+```bash
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+```
+再次更新软件源
+```bash
+sudo pacman -Syu
+```
+
+### 2. 安装gnome的中文输入法ibus
+
+如果你在安装时已经选择了zh_CN作为系统语言，你的Arch就已经显示中文了，你就可以直接安装输入法了。
+
+如果你没在安装时选择中文你需要：
+```bash
+sudo vim /etc/locale.gen
+```
+在这个文本文件中去除zh_CN.UTF-8的#号
+```bash
+sudo locale-gen
+```
+ibus适合安装在gnome上
+```bash
+sudo pacman -S ibus  ibus-sunpinyin ibus-libpinyin ibus-table-chinese
+```
