@@ -120,3 +120,7 @@ ibus适合安装在gnome上
 ```bash
 sudo pacman -S ibus  ibus-sunpinyin ibus-libpinyin ibus-table-chinese
 ```
+
+## 完成了Arch Linux的安装和基本配置
+
+这种安装方式比安装Windows和其他简单的发行版比你觉得怎样呢？
