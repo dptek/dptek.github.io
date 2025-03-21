@@ -19,7 +19,7 @@ image:
 
 * Alpine Linux 镜像的默认登录用户名：root 密码为空，直接回车便可登录。
 
-* 使用 alpine-setup 进行安装并且参照我的视频回答提示问题完成安装。
+* 使用 setup-alpine 照我的视频回答提示问题完成安装。
 
 * 重启 Alpine Linux
 
