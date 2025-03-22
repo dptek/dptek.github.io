@@ -21,9 +21,24 @@ image: assets/images/2025-03-21/npm无需开端口改DNS记录让你的内网网
 
 * 使用 setup-alpine 照我的视频回答提示问题完成安装。
 
+* 安装时可能需要手动配置静态 IP 地址, 请按如下样板按需更改：
+
+```bash
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+        address 192.168.1.11
+        netmask 255.255.255.0
+        gateway 192.168.1.254
+```
+
 * 重启 Alpine Linux
 
 * ssh 进入 Alpine Linux 更新系统
+
+
 
 ```bash
 su
