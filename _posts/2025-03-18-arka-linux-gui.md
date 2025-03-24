@@ -3,7 +3,7 @@ layout: post
 title: "Arka Linux GUI 让你像安装 Windows 一样在图形界面下简单安装 ArchLinux 无需任何命令行"
 author: DPTEK
 date: 2025-03-18 07:07:07 -0700
-categories: 浏览器
+categories: Linux
 image: assets/images/2025-03-18/ArkaLinuxGUI-install-arch-linux.png
 ---
 
