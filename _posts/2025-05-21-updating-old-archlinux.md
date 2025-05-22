@@ -3,11 +3,11 @@ layout: post
 title: "更新陈旧的Arch Linux，维护困难吗？"
 author: DPTEK
 date: 2025-05-21 07:07:07 -0700
-categories: Linux gaming
-image: assets/images/2025-03-03/ArchLinux-CachyOS-0.png
+categories: Linux
+image: assets/images/2025-05-21/更新长久未更新过的Arch Linux.png
 ---
 
-更新一个长时间未更新的Arch Linux系统可能会遇到一些常见问题，包括软件源速度慢、PGP密钥过期或无效、依赖冲突等。以下是一个详细的指南，列出可能遇到的问题以及解决这些问题的命令，适合用于你的视频教程。这些步骤假设你使用的是Arch Linux，并且你的系统有网络连接。
+更新一个长时间未更新的Arch Linux系统可能会遇到一些常见问题，包括软件源速度慢、PGP密钥过期或无效、依赖冲突等。
 
 ---
 
