@@ -45,21 +45,8 @@ Write-Output "设置已完成！无需重启即可生效。"
 
 ---
 
-### **脚本说明**
-
-1. **禁用 Ctrl+Alt+Del 登录**
-
-   * 修改注册表项 `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System` 中的 `DisableCAD` 值为 `1`。
-   * 当值为 `1` 时，用户无需按下 `Ctrl+Alt+Del` 即可登录。
-
-2. **禁用关机/重启事件跟踪**
-
-   * 确保路径 `HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability` 存在，如果不存在，会自动创建。
-   * 设置 `ShutdownReasonOn` 值为 `0`，禁用系统在关机或重启时询问事件原因。
-
----
-
 ### **运行脚本步骤**
+最直接的方式就是复制黏贴以上脚本到你的Powershell ISE 编辑器中然后点击执行按钮。
 
 1. 将以上脚本保存为文件，例如 `DisableFeatures.ps1`。
 2. 打开 PowerShell，以管理员权限运行：
@@ -71,7 +58,3 @@ Write-Output "设置已完成！无需重启即可生效。"
 
 ---
 
-完成运行后，系统将：
-
-* 登录时跳过 **Ctrl+Alt+Del** 步骤。
-* 关机或重启时不再提示填写事件原因。
