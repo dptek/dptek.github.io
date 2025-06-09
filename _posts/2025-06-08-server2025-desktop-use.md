@@ -4,7 +4,7 @@ title: "正确设置 Windows Server 2025 作为你的桌面操作系统 "
 author: DPTEK
 date: 2025-06-08 07:07:07 -0700
 categories: Windows
-image: assets/images/2025-06-08/1.png
+image: 
 ---
 
 以下是调整 Windows Server 2025 为桌面操作系统的指南，**将命令行方法优先列出**，随后补充对应的 GUI 操作说明：
