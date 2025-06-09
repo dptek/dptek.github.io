@@ -40,7 +40,7 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
 # 禁用 Server Manager 启动
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\ServerManager" -Name DoNotOpenServerManagerAtLogon -Value 1
 
-Write-Output "设置已完成！无需重启即可生效。"
+Write-Output "设置已完成！无需重启即可生效"
 ```
 
 ---
