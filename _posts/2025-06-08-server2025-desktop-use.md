@@ -7,83 +7,104 @@ categories: Windows
 image: assets/images/2025-06-08/1.png
 ---
 
-### **1. Install Desktop Experience**
-
-To enable Desktop Experience:
-
-#### **PowerShell**
-
-```powershell
-Install-WindowsFeature Desktop-Experience
-```
-
-After installation, restart the server:
-
-```powershell
-Restart-Computer
-```
+以下是调整 Windows Server 2025 为桌面操作系统的指南，**将命令行方法优先列出**，随后补充对应的 GUI 操作说明：
 
 ---
 
-### **2. Enable Themes**
+### **1. 安装 Desktop Experience**
 
-To enable and start the **Themes** service:
+#### **命令行**
 
-#### **CMD**
+##### PowerShell
+
+```powershell
+Install-WindowsFeature Desktop-Experience
+Restart-Computer
+```
+
+#### **GUI**
+
+1. 打开 **Server Manager**。
+2. 点击 **Add Roles and Features**。
+3. 在向导中，选择 **Desktop Experience** 功能（在 **User Interfaces and Infrastructure** 下）。
+4. 安装完成后，重启服务器。
+
+---
+
+### **2. 启用主题**
+
+#### **命令行**
+
+##### CMD
 
 ```cmd
 sc config Themes start= auto
 net start Themes
 ```
 
-#### **PowerShell**
+##### PowerShell
 
 ```powershell
 Set-Service -Name Themes -StartupType Automatic
 Start-Service Themes
 ```
 
+#### **GUI**
+
+1. 打开 **Services**（运行 `services.msc`）。
+2. 找到 **Themes** 服务。
+3. 设置为 **Automatic** 并启动。
+4. 右键单击桌面，选择 **Personalize**，选择一个主题。
+
 ---
 
-### **3. Enable Audio**
+### **3. 启用音频**
 
-To enable and start the **Windows Audio** service:
+#### **命令行**
 
-#### **CMD**
+##### CMD
 
 ```cmd
 sc config Audiosrv start= auto
 net start Audiosrv
 ```
 
-#### **PowerShell**
+##### PowerShell
 
 ```powershell
 Set-Service -Name Audiosrv -StartupType Automatic
 Start-Service Audiosrv
 ```
 
+#### **GUI**
+
+1. 打开 **Services**。
+2. 找到 **Windows Audio** 服务。
+3. 设置为 **Automatic** 并启动。
+
 ---
 
-### **4. Simplify Login/Logout**
+### **4. 简化登录/注销**
 
-#### Disable Ctrl+Alt+Del for Login
+#### **命令行**
 
-#### **CMD**
+##### 禁用 Ctrl+Alt+Del 登录
+
+###### CMD
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableCAD /t REG_DWORD /d 1 /f
 ```
 
-#### **PowerShell**
+###### PowerShell
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name DisableCAD -Value 1
 ```
 
-#### Enable Auto-login
+##### 启用自动登录
 
-#### **CMD**
+###### CMD
 
 ```cmd
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultUserName /t REG_SZ /d "<YourUsername>" /f
@@ -91,7 +112,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v DefaultP
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /t REG_SZ /d "1" /f
 ```
 
-#### **PowerShell**
+###### PowerShell
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name DefaultUserName -Value "<YourUsername>"
@@ -99,126 +120,159 @@ Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlo
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" -Name AutoAdminLogon -Value "1"
 ```
 
+#### **GUI**
+
+1. 打开 **Local Group Policy Editor** (`gpedit.msc`)。
+2. 导航到 **Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options**。
+3. 启用 **Interactive Logon: Do not require CTRL+ALT+DEL**。
+4. 运行 `netplwiz`，取消勾选 **Users must enter a username and password to use this computer**，输入自动登录的凭据。
+
 ---
 
-### **5. Adjust Power Settings**
+### **5. 调整电源设置**
 
-Switch to the **Balanced** power plan:
+#### **命令行**
 
-#### **CMD**
+##### CMD/PowerShell
 
 ```cmd
 powercfg /setactive SCHEME_BALANCED
 ```
 
-#### **PowerShell**
+#### **GUI**
 
-```powershell
-powercfg /setactive SCHEME_BALANCED
-```
+1. 打开 **Control Panel > Power Options**。
+2. 选择 **Balanced** 电源计划或创建自定义计划。
 
 ---
 
-### **6. Optimize Startup and Shutdown**
+### **6. 优化启动和关机**
 
-#### Disable Server Manager at Startup
+#### **命令行**
 
-#### **PowerShell**
+##### 禁用 Server Manager 启动
+
+###### PowerShell
 
 ```powershell
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\ServerManager" -Name DoNotOpenServerManagerAtLogon -Value 1
 ```
 
-#### Manage Startup Items
+##### 管理启动项
 
-To disable specific startup services, use:
-
-#### **PowerShell**
+###### PowerShell
 
 ```powershell
 Get-Service | Where-Object {$_.StartType -eq "Automatic"} | Out-GridView -PassThru | Set-Service -StartupType Manual
 ```
 
+#### **GUI**
+
+1. 打开 **Task Manager** (`Ctrl+Shift+Esc`)。
+2. 在 **Startup** 选项卡中禁用不必要的启动服务。
+3. 在 **Server Manager** 中，转到 **Manage > Server Manager Properties**，禁用启动时自动打开。
+
 ---
 
-### **7. Add Missing Desktop Features**
+### **7. 添加缺失的桌面功能**
 
-#### Enable Windows Search
+#### **命令行**
 
-#### **CMD**
+##### 启用 Windows Search
+
+###### CMD
 
 ```cmd
 sc config WSearch start= auto
 net start WSearch
 ```
 
-#### **PowerShell**
+###### PowerShell
 
 ```powershell
 Set-Service -Name WSearch -StartupType Automatic
 Start-Service WSearch
 ```
 
-#### Install Microsoft Store (Sideload)
+#### **GUI**
 
-Sideloading the Microsoft Store requires downloading and installing the required packages manually or through Chocolatey:
-
-```powershell
-choco install microsoft-store
-```
+1. 打开 **Services**。
+2. 找到 **Windows Search** 服务并设置为 **Automatic**。
+3. 手动安装缺失的功能（如 Microsoft Store）。
 
 ---
 
-### **8. Tweak Performance Settings**
+### **8. 调整性能设置**
 
-Switch to prioritize applications instead of background services:
+#### **命令行**
 
-#### **CMD**
+###### CMD
 
 ```cmd
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\PriorityControl" /v Win32PrioritySeparation /t REG_DWORD /d 26 /f
 ```
 
-#### **PowerShell**
+###### PowerShell
 
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\PriorityControl" -Name Win32PrioritySeparation -Value 26
 ```
 
+#### **GUI**
+
+1. 右键单击 **This PC**，选择 **Properties > Advanced System Settings**。
+2. 在 **Performance** 中点击 **Settings**，选择 **Adjust for best performance** 或自定义。
+
 ---
 
-### **9. Install Desktop Software**
+### **9. 安装桌面软件**
 
-#### Use Chocolatey for quick software installations:
+#### **命令行**
 
-#### **PowerShell**
+##### 使用 Chocolatey 快速安装
+
+###### PowerShell
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
-[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 choco install googlechrome vlc -y
 ```
 
+#### **GUI**
+
+1. 手动从网络下载和安装常用的桌面软件。
+
 ---
 
-### **10. Regular Updates and Security**
+### **10. 配置更新与安全性**
 
-#### Set Windows Update to Auto:
+#### **命令行**
 
-#### **CMD**
+###### 启用 Windows Update
+
+CMD:
 
 ```cmd
 sc config wuauserv start= auto
 net start wuauserv
 ```
 
-#### **PowerShell**
+PowerShell:
 
 ```powershell
 Set-Service -Name wuauserv -StartupType Automatic
 Start-Service wuauserv
 ```
+
+#### **GUI**
+
+1. 打开 **Windows Update**，检查更新并设置自动更新。
+
+---
+
+希望这些改进帮助您更高效地将 Windows Server 调整为桌面环境！如需进一步帮助，请随时联系我。
+
 
 ### 以下是一键执行脚本实现以上所有任务
 请将以下脚本保存为 DesktopOptimization.ps1 
