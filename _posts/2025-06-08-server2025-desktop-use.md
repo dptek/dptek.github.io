@@ -54,7 +54,5 @@ Write-Output "设置已完成！无需重启即可生效。"
    ```powershell
    .\DisableFeatures.ps1
    ```
-3. 等待脚本完成运行。
-
 ---
 
