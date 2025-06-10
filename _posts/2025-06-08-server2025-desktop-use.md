@@ -11,6 +11,7 @@ image: assets/images/2025-06-08/1.png
 
 1. 禁用 **Ctrl+Alt+Del** 登录。
 2. 禁用关机/重启事件跟踪。
+3. 禁用 Server Manager 开机启动
 
 ---
 
