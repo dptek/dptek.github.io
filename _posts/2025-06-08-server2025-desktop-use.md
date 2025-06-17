@@ -70,21 +70,18 @@ Write-Output "设置已完成！无需重启即可生效"
 
 ## 个别笔记本中触控板问题
 
-
 1. Load a W11 Pro image, and explore the mounted folder.
 
-2. Copy these "\Windows\System32\DriverStore\FileRepository" folders to another location:
-Code:
+2. 从Windows 11 拷贝下面的三个文件夹到你的Ventoy U盘： 来源："\Windows\System32\DriverStore\FileRepository" :
 
+文件夹名：
 amdi2c.inf_amd64_d7ae71f8eb52c084
 hidi2c.inf_amd64_e94f3ca241858aef
 iai2c.inf_amd64_a77c815b2999404d
-
-
-3. Unload W11. Reload Server 2025.
-4. From the Drivers screen, Add / Directory containing drivers / Add your copied folders.
-
-5. Find a copy of the OEM's touchpad drivers. Extract them to a local folder, and add those drivers too.
+3. 启动到Ventoy FirPE 环境， 拷贝上面三个文件夹到Server 2025 同样位置，并覆盖。
+4. 重启Server 2025
+5. 有必要的话重新安装笔记本官方的触控板驱动，重启。
+6. 在设置程序中关闭触控板在重新打开，即可正常使用了
 
 ## 结论
 
