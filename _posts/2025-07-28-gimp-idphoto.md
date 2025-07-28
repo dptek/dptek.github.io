@@ -1,16 +1,15 @@
 ---
----
 layout: post
-title: "gimp-idphoto"
+title: "使用GIMP3以及两款插件制作护照签证照片-一键去背景和一键生成六连张证件照"
 author: DPTEK
 date: 2025-07-28 07:07:07 -0700
-categories: Windows
+categories: 开源软件
 image: assets/images/2025-07-28/1.png
 ---
 
 # 使用GIMP自己制作护照签证照片美国中国和其它国家都适用！
 
-没人需要Photoshop！除非你在公司做牛马不得不使用。我们家庭用户只要有GIMP就可以解决证件照片的大事，只需要装好这两款GIMP插件和脚本就可以在一分钟内制作出你的完美证件照。
+没人需要Photoshop！除非你在公司做牛马不得不使用。我们家庭用户只要有GIMP就可以解决证件照片的大事，有手机照好头像后，只需要装好这两款GIMP插件和脚本就可以在一分钟内制作出你的完美证件照。一键去背景，一键生成六连张！
 
 # 安装GIMP
 * Windows
