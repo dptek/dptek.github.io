@@ -13,7 +13,9 @@ image: assets/images/2025-07-28/1.png
 
 # 安装GIMP
 * Windows
+```
 winget install  GIMP.GIMP.3
+```
 * Arch
 
 ```bash
