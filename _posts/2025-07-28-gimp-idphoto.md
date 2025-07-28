@@ -5,7 +5,7 @@ title: "gimp-idphoto"
 author: DPTEK
 date: 2025-07-28 07:07:07 -0700
 categories: Windows
-image: assets/images/2025-07-28/1.png
+image: assets/images/2025-07-28/1.jpg
 ---
 
 # 使用GIMP自己制作护照签证照片美国中国和其它国家都适用！
