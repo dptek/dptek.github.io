@@ -20,18 +20,20 @@ sudo pacman -S gimp
 ## 所需插件和脚本安装
 
 1. AI去背景插件 RemoveBG-GIMP
-* Homepage：https://www.remove.bg/a/gimp-remove-background-plugin
-* Github：https://github.com/manu12121999/RemoveBG-GIMP
+* Homepage：[https://www.remove.bg/a/gimp-remove-background-plugin](https://www.remove.bg/a/gimp-remove-background-plugin)
+* Github：[https://github.com/manu12121999/RemoveBG-GIM](https://github.com/manu12121999/RemoveBG-GIM)
 * 安装路径(选一个就可以了)：
 C:\Users\Administrator\AppData\Roaming\GIMP\3.0\plug-ins
+
 C:\Users\Administrator\AppData\Local\Programs\GIMP 3\lib\gimp\3.0\plug-ins
 * 获取removebg API key
 https://www.remove.bg/tools-api
 
 2. 大頭照排版 idPhoto(Passport Photo) for GIMP 3.0 
-Homepage: https://elastic192.blogspot.com/2025/04/idphoto-for-gimp-30.html
+Homepage: [https://elastic192.blogspot.com/2025/04/idphoto-for-gimp-30.html](https://elastic192.blogspot.com/2025/04/idphoto-for-gimp-30.html)
 * 安装路径(选一个就可以了)：
 C:\Users\Administrator\AppData\Roaming\GIMP\3.0\scripts
+
 C:\Users\Administrator\AppData\Local\Programs\GIMP 3\share\gimp\3.0\scripts
 
 Linux具体安装路径请查看GIMP设置中的路径即可。
