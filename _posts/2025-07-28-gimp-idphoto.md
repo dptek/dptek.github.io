@@ -1,0 +1,41 @@
+---
+---
+layout: post
+title: "gimp-idphoto"
+author: DPTEK
+date: 2025-07-28 07:07:07 -0700
+categories: Windows
+image: assets/images/2025-07-28/1.png
+---
+
+# 使用GIMP自己制作护照签证照片美国中国和其它国家都适用！
+
+没人需要Photoshop！除非你在公司做牛马不得不使用。我们家庭用户只要有GIMP就可以解决证件照片的大事，只需要装好这两款GIMP插件和脚本就可以在一分钟内制作出你的完美证件照。
+
+# 安装GIMP
+* Windows
+winget install  GIMP.GIMP.3
+* Arch
+sudo pacman -S gimp
+
+## 所需插件和脚本安装
+
+1. AI去背景插件 RemoveBG-GIMP
+* Homepage：https://www.remove.bg/a/gimp-remove-background-plugin
+* Github：https://github.com/manu12121999/RemoveBG-GIMP
+* 安装路径(选一个就可以了)：
+C:\Users\Administrator\AppData\Roaming\GIMP\3.0\plug-ins
+C:\Users\Administrator\AppData\Local\Programs\GIMP 3\lib\gimp\3.0\plug-ins
+* 获取removebg API key
+https://www.remove.bg/tools-api
+
+2. 大頭照排版 idPhoto(Passport Photo) for GIMP 3.0 
+Homepage: https://elastic192.blogspot.com/2025/04/idphoto-for-gimp-30.html
+* 安装路径(选一个就可以了)：
+C:\Users\Administrator\AppData\Roaming\GIMP\3.0\scripts
+C:\Users\Administrator\AppData\Local\Programs\GIMP 3\share\gimp\3.0\scripts
+
+Linux具体安装路径请查看GIMP设置中的路径即可。
+
+## 具体安装和使用细节请查看视频：
+
