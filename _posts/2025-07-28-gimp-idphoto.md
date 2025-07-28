@@ -15,7 +15,10 @@ image: assets/images/2025-07-28/1.png
 * Windows
 winget install  GIMP.GIMP.3
 * Arch
+
+```bash
 sudo pacman -S gimp
+```
 
 ## 所需插件和脚本安装
 
