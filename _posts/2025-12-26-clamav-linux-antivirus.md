@@ -4,7 +4,7 @@ title: "Linux需要杀毒软件吗？我可以不装，但是你不能没有！"
 author: DPTEK
 date: 2025-12-26 07:07:07 -0700
 categories: 开源软件
-image: assets/images/2025-12-26/1.webp
+image: assets/images/2025-12-26/clamav.webp
 ---
 
 ### ClamAV 简介
