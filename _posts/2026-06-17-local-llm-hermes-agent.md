@@ -5,6 +5,7 @@ author: DPTEK
 date: 2026-06-17 21:25:47 -0400
 categories: Linux AI
 image: assets/images/2026-06-17/hermes_ai.png
+video: 
 ---
 
 ## 安装 llama.cpp-cuda（nVIDIA） 或者 llama.cpp-vulkan（AMD）
