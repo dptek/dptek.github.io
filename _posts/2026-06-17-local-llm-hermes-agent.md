@@ -19,13 +19,13 @@ paru llama.cpp-cuda
 
 ---
 
-### 1. `Qwen3-VL-8B-Thinking-abliterated.Q8_0.gguf`
+### 1. `Qwen3-VL-8B-Thinking-abliterated.Q8_0.gguf` (8.1GB，显存占用约 10GB)
 
 ```bash
 python3 -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='mradermacher/Qwen3-VL-8B-Thinking-abliterated-GGUF', filename='Qwen3-VL-8B-Thinking-abliterated.Q8_0.gguf', local_dir='.')"
 ```
 
-### 2. `gemma-4-12B-it-heretic.Q4_K_M.gguf`
+### 2. `gemma-4-12B-it-heretic.Q4_K_M.gguf`(6.9GB, 显存占用约 8GB)
 
 *(注：请注意此仓库文件中的 `12B` 为大写)*
 
@@ -33,13 +33,13 @@ python3 -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id
 python3 -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='mradermacher/gemma-4-12B-it-heretic-i1-GGUF', filename='gemma-4-12B-it-heretic.Q4_K_M.gguf', local_dir='.')"
 ```
 
-### 3. `gemma-4-12b-heretic-abliterated.i1-Q4_K_M.gguf`
+### 3. `gemma-4-12b-heretic-abliterated.i1-Q4_K_M.gguf` (6.9GB, 显存占用约 8GB)
 
 ```bash
 python3 -c "from huggingface_hub import hf_hub_download; hf_hub_download(repo_id='mradermacher/gemma-4-12b-heretic-abliterated-i1-GGUF', filename='gemma-4-12b-heretic-abliterated.i1-Q4_K_M.gguf', local_dir='.')"
 ```
 
-### 4. `gemma-4-E4B-it-uncensored-Q4_K_M.gguf`
+### 4. `gemma-4-E4B-it-uncensored-Q4_K_M.gguf` (4.3GB, 显存占用约 5GB)
 
 *(注：原 TrevorJS 仓库中的连字符已为你修正校对)*
 
